@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chai Detail Page
+{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<h1 class="bg-orange-500 text-3xl text-white text-center py-3 font-bold">
+    Chai Detail
+</h1>
+
+<!-- Main Container -->
+<div class="max-w-4xl mx-auto p-6 mt-6 bg-gray-800 rounded-xl shadow-lg">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+        <!-- Image -->
+        <div>
+            <img
+                src="{{ chai.image.url }}"
+                alt="{{ chai.name }}"
+                class="w-full h-72 object-cover rounded-lg"
+            >
+        </div>
+
+        <!-- Content -->
+        <div class="text-white">
+            <h2 class="text-4xl font-bold mb-4">
+                {{ chai.name }}
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                {{ chai.description }}
+            </p>
+
+            <span class="inline-block bg-orange-600 px-4 py-2 rounded-md text-sm font-semibold">
+                {{ chai.type }}
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
